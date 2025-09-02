@@ -1,1 +1,1 @@
-export const API_URL="http://localhost:5000"
+export const API_URL="https://management-backend-production-2db3.up.railway.app"
