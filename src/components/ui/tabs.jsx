@@ -1,5 +1,4 @@
 import { useState, createContext, useContext } from "react";
-
 const TabsContext = createContext();
 
 export function Tabs({ defaultValue, children }) {

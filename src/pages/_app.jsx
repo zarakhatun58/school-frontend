@@ -1,15 +1,22 @@
 "use client";
-import "../styles/globals.css";
+
 import { AuthProvider } from "../context/AuthContext";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import "../styles/globals.css";
 
-export default function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow">
+          <Component {...pageProps} />
+        </main>
+        <Footer />
+      </div>
     </AuthProvider>
   );
 }
+
+export default MyApp;
